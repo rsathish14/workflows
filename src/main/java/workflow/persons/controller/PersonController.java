@@ -17,7 +17,7 @@ public class PersonController {
     }
 
     @PostMapping("/create")
-    public void create(Person person) {
+    public void create(@RequestBody Person person) {
         personService.create(person);
     }
 
