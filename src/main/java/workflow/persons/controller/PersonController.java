@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.*;
 import workflow.persons.Person;
 import workflow.persons.service.PersonService;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("persons")
-@CrossOrigin(origins = "http://localhost:3000")
 public class PersonController {
     @Autowired
     PersonService personService;
