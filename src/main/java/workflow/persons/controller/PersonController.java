@@ -7,6 +7,7 @@ import workflow.persons.service.PersonService;
 
 @RestController
 @RequestMapping("persons")
+@CrossOrigin(origins = "http://localhost:3000")
 public class PersonController {
     @Autowired
     PersonService personService;
