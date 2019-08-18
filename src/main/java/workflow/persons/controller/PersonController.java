@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.*;
 import workflow.persons.Person;
 import workflow.persons.service.PersonService;
 
+import java.util.List;
+
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("persons")
@@ -12,9 +14,9 @@ public class PersonController {
     @Autowired
     PersonService personService;
 
-    @GetMapping("/{name}")
-    public Person findByName(@PathVariable String name) {
-        return personService.findByName(name);
+    @GetMapping("/list")
+    public List<Person> findAll() {
+        return personService.findAll();
     }
 
     @PostMapping("/create")
