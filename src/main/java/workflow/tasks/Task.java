@@ -1,29 +1,29 @@
-package workflow.persons;
+package workflow.tasks;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "persons")
+@Document(collection = "tasks")
 @Data
-public class Person {
+public class Task {
     @Id
     String id;
-    String userid;
     String name;
+    String assignee;
 
-    public Person() {}
+    public Task() {}
 
-    public Person(String userid, String name) {
-        this.userid = userid;
+    public Task(String name, String assignee) {
         this.name = name;
+        this.assignee = assignee;
     }
 
     @Override
     public String toString() {
         return String.format(
-                "Person[userid='%s', name='%s']",
-                userid, name);
+                "Task[name='%s', assignee='%s']",
+                name, assignee);
     }
 
 }

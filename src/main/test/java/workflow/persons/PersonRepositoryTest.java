@@ -1,4 +1,4 @@
-package workflow.persons;
+package workflow.tasks;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
