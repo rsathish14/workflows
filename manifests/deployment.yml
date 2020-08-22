@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "k8stest-49a5"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "k8stest-49a5"
+    spec:
+      containers:
+        - name: "k8stest-49a5"
+          image: "containerregistry14.azurecr.io/k8stest"
+          ports:
+          - containerPort: 80
